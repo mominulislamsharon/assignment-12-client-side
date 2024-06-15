@@ -37,7 +37,7 @@ const Login = () => {
         <FaGoogle></FaGoogle>
         <h1>Google</h1>
       </div>
-      <h1 className="text-white text-center mt-6 mb-6">New User? <Link to="" className="text-blue-500">Sign Up</Link></h1>
+      <h1 className="text-white text-center mt-6 mb-6">New User? <Link to="/signUp" className="text-blue-500 ml-3">Sign Up</Link></h1>
     </div>
   </div>
 </div>
