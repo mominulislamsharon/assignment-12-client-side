@@ -11,7 +11,7 @@ const Navbar = () => {
     <li><Link to="/contact">CONTACT</Link></li>
     </>
     return (
-        <div className="navbar px-36 text-white h-[80px] bg-[#79797b] mb-8 border">
+        <div className="navbar lg:px-36 text-white h-[80px] bg-[#011435]   bg-opacity-80">
   <div className=" navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
