@@ -5,7 +5,7 @@ const HomeAbout = () => {
     return (
         <div className="flex flex-col lg:flex-row max-w-screen-xl mx-auto mt-24 gap-12 p-4">
             <div>
-                <img className=" mt-10 h-auto lg:h-[450px] w-full lg:w-[900px] rounded-lg" src="https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?" alt="" />
+                <img className=" mt-10 h-auto lg:h-[450px] w-full lg:w-[900px] rounded-lg object-cover object-center" src="https://images.pexels.com/photos/2108845/pexels-photo-2108845.jpeg?" alt="" />
             </div>
             <div>
                 <button className="bg-[#1b8ddd] text-white font-bold p-3 rounded-md">About Us</button>

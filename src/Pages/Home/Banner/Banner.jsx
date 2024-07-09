@@ -11,7 +11,7 @@ const Banner = () => {
     return (
         <Carousel>
             <div className="w-full h-full flex justify-center items-center">
-                <img src={bannerImg2} className="w-full h-full object-cover" />
+                <img src={bannerImg2} className="w-full h-full object-cover object-center" />
                 <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center p-4">
                     <h1 className="text-2xl lg:text-5xl text-white font-bold text-center mb-4 lg:w-1/2">Exh1lore Your Journey: Your Ultimate Tourist Guide for Adventure!</h1>
                     <div className="text-white text-center lg:w-1/2 font-medium"> 
