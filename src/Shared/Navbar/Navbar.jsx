@@ -30,8 +30,8 @@ const Navbar = () => {
     <div className="dropdown dropdown-bottom dropdown-end">
   <div tabIndex={0} role="button" className="btn m-1">Profile</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-    <li className="text-black"><a>LogOut</a></li>
-    <li><a>Dashboard</a></li>
+    < Link to="/login" className="text-black"><a>LogOut</a></ Link>
+    <Link><a className="text-black">Dashboard</a></Link>
   </ul>
 </div>
   </div>
