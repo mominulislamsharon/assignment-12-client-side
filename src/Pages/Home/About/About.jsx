@@ -19,7 +19,7 @@ const About = () => {
           </h1>
           <FaQuoteLeft className="text-3xl text-slate-400" />
           <p className="text-xl pt-6 text-blue-300 font-medium">
-            Our travel agency specializes in crafting unforgettable journeys.{" "}
+            Our travel agency specializes in crafting unforgettable journeys.
           </p>
         </div>
       </div>
