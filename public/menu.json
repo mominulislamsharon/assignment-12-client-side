@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "title": "Paris, France",
+    "image": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?",
+    "description": "Explore the romantic city of Paris with its iconic landmarks like the Eiffel Tower and Louvre Museum.",
+    "price": 1200,
+    "location": "48.8566, 2.3522",
+    "rating": 4.8,
+    "category": "City Tours"
+  },
+  {
+    "id": 2,
+    "title": "Tokyo, Japan",
+    "image": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?",
+    "description": "Experience the bustling metropolis of Tokyo, known for its blend of traditional culture and modern technology.",
+    "price": 1500,
+    "location": "35.6895, 139.6917",
+    "rating": 4.7,
+    "category": "City Tours"
+  },
+  {
+    "id": 3,
+    "title": "London, UK",
+    "image": "https://img.freepik.com/free-photo/full-shot-senior-women-running_23-2149151673.jpg?",
+    "description": "Discover the historic city of London with its royal palaces, museums, and vibrant street life.",
+    "price": 1100,
+    "location": "51.5074, -0.1278",
+    "rating": 4.6,
+    "category": "City Tours"
+  },
+  {
+    "id": 4,
+    "title": "Sydney, Australia",
+    "image": "https://images.unsplash.com/photo-1523428096881-5bd79d043006?",
+    "description": "Enjoy the sunny beaches and laid-back atmosphere of Sydney, a city known for its iconic Opera House and Harbour Bridge.",
+    "price": 1700,
+    "location": "-33.8688, 151.2093",
+    "rating": 4.7,
+    "category": "Beach Holidays"
+  },
+  {
+    "id": 5,
+    "title": "Rome, Italy",
+    "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "description": "Immerse yourself in the ancient history and delicious cuisine of Rome, home to landmarks like the Colosseum and Vatican City.",
+    "price": 1300,
+    "location": "41.9028, 12.4964",
+    "rating": 4.8,
+    "category": "City Tours"
+  },
+  {
+    "id": 6,
+    "title": "Berlin, Germany",
+    "image": "https://img.freepik.com/free-photo/close-up-smiley-reporter-uk_23-2149267769.jpg?",
+    "description": "Experience Berlin's vibrant arts scene, historical sites like the Berlin Wall, and lively nightlife.",
+    "price": 1400,
+    "location": "52.5200, 13.4050",
+    "rating": 4.5,
+    "category": "Adventure Tours"
+  },
+  {
+    "id": 7,
+    "title": "New York, USA",
+    "image": "https://images.unsplash.com/photo-1527631746610-bca00a040d60?",
+    "description": "Explore the diverse neighborhoods, iconic skyscrapers, and cultural attractions of New York City.",
+    "price": 1600,
+    "location": "40.7128, -74.0060",
+    "rating": 4.9,
+    "category": "Adventure Tours"
+  },
+  {
+    "id": 8,
+    "title": "Dubai, UAE",
+    "image": "https://images.pexels.com/photos/1089645/pexels-photo-1089645.jpeg?",
+    "description": "Experience luxury shopping, futuristic architecture, and desert adventures in the dynamic city of Dubai.",
+    "price": 1800,
+    "location": "25.2769, 55.2963",
+    "rating": 4.6,
+    "category": "Adventure Tours"
+  },
+  {
+    "id": 9,
+    "title": "Cape Town, South Africa",
+    "image": "https://img.freepik.com/premium-photo/panoramic-views-rock-ocean-silhouette-running-people-beach-holding-hands-young-couple-have-fun_195549-8224.jpg?w=1380",
+    "description": "Discover Cape Town's stunning beaches, Table Mountain, and vibrant cultural scene.",
+    "price": 1400,
+    "location": "-33.9249, 18.4241",
+    "rating": 4.7,
+    "category": "Couple Tours"
+  },
+  {
+    "id": 10,
+    "title": "Rio de Janeiro, Brazil",
+    "image": "https://images.unsplash.com/photo-1544989164-31dc3c645987?",
+    "description": "Experience the vibrant carnival spirit, beautiful beaches, and Sugarloaf Mountain in Rio de Janeiro.",
+    "price": 1600,
+    "location": "-22.9068, -43.1729",
+    "rating": 4.8,
+    "category": "Couple Tours"
+  },
+  {
+    "id": 11,
+    "title": "Amsterdam, Netherlands",
+    "image": "https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?",
+    "description": "Explore the charming canals, historic buildings, and vibrant cultural scene of Amsterdam.",
+    "price": 1250,
+    "location": "52.3676, 4.9041",
+    "rating": 4.7,
+    "category": "Group Tours"
+  },
+  {
+    "id": 12,
+    "title": "Bandarban, Bangladesh",
+    "image": "https://images.unsplash.com/photo-1585123388867-3bfe6dd4bdbf?",
+    "description": "Experience the bustling streets, skyscrapers, and vibrant food scene of Hong Kong.",
+    "price": 1550,
+    "location": "22.3193, 114.1694",
+    "rating": 4.6,
+    "category": "Group Tours"
+  },
+  {
+    "id": 13,
+    "title": "CoxsBazar, Bangladesh",
+    "image": "https://images.unsplash.com/photo-1619177383949-f03975e50b19?",
+    "description": "Discover Barcelona's unique architecture, lively street life, and Mediterranean beaches.",
+    "price": 1350,
+    "location": "41.3851, 2.1734",
+    "rating": 4.8,
+    "category": "Hosted Tours"
+  },
+  {
+    "id": 14,
+    "title": "Singapore",
+    "image": "https://img.freepik.com/free-photo/landmark-urban-district-city-commercial_1203-6162.jpg?",
+    "description": "Explore Singapore's blend of modern skyscrapers, cultural heritage, and delicious street food.",
+    "price": 1650,
+    "location": "1.3521, 103.8198",
+    "rating": 4.9,
+    "category": "Hosted Tours"
+  },
+  {
+    "id": 15,
+    "title": "sajek Vally, Bangladesh",
+    "image": "https://images.unsplash.com/photo-1637419705926-9e790aeecf1c?",
+    "description": "Experience the vibrant souks, palaces, and gardens of Marrakech, a city at the foothills of the Atlas Mountains.",
+    "price": 1450,
+    "location": "31.6295, -7.9811",
+    "rating": 4.5,
+    "category": "Hosted Tours"
+  }
+]

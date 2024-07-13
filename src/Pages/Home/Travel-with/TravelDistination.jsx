@@ -13,11 +13,11 @@ const TravelDistination = () => {
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div className="card  card-compact h-[300px] shadow-xl">
           <figure className="relative">
-            <img className="w-[300px] h-[250px]"
+            <img className="w-full h-full object-cover"
               src="https://images.pexels.com/photos/13287929/pexels-photo-13287929.jpeg?"
               alt="Shoes"
             />
-            <div className="absolute -bottom-5 text-red-500 bg-white rounded-full p-4 text-5xl">
+            <div className="absolute -bottom-5 text-blue-500 bg-white rounded-full p-4 text-5xl">
               <FaUsers />
             </div>
           </figure>
@@ -27,11 +27,11 @@ const TravelDistination = () => {
         </div>
         <div className="card  card-compact h-[300px]  shadow-xl">
           <figure className="relative">
-            <img className="w-[300px] h-[250px]"
+            <img className="w-full h-full object-cover "
               src="https://images.pexels.com/photos/6248957/pexels-photo-6248957.jpeg?"
               alt="Shoes"
             />
-            <div className="absolute -bottom-5 text-red-500 bg-white rounded-full p-4 text-5xl">
+            <div className="absolute -bottom-5 text-blue-500 bg-white rounded-full p-4 text-5xl">
             <FaUserTie />
             </div>
           </figure>
@@ -41,11 +41,11 @@ const TravelDistination = () => {
         </div>
         <div className="card  card-compact h-[300px] bg-base-100 shadow-xl">
           <figure className="relative">
-            <img className="w-[300px] h-[250px]"
+            <img className="w-full h-full object-cover"
               src="https://images.pexels.com/photos/2432299/pexels-photo-2432299.jpeg?"
               alt="Shoes"
             />
-            <div className="absolute -bottom-5 text-red-500 bg-white rounded-full p-4 text-5xl">
+            <div className="absolute -bottom-5 text-blue-500 bg-white rounded-full p-4 text-5xl">
             <MdOutlineCardTravel />
             </div>
           </figure>
@@ -55,11 +55,11 @@ const TravelDistination = () => {
         </div>
         <div className="card  card-compact  h-[300px] bg-base-100 shadow-xl">
           <figure className="relative">
-            <img className="w-[300px] h-[250px]"
+            <img className="w-full h-full object-cover "
               src="https://images.pexels.com/photos/3760257/pexels-photo-3760257.jpeg?"
               alt="Shoes"
             />
-            <div className="absolute -bottom-5 text-red-500 bg-white rounded-full p-4 text-5xl">
+            <div className="absolute -bottom-5 text-blue-500 bg-white rounded-full p-4 text-5xl">
             <IoHappyOutline />
             </div>
           </figure>
