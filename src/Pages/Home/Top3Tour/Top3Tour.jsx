@@ -4,7 +4,7 @@ import StarRatings from "react-star-ratings";
 const Top3Tour = ({tour}) => {
   const {image, rating, title, price, description} = tour;
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card  bg-base-100 md:w-96 shadow-xl">
   <figure className="h-52 overflow-hidden">
     <img
       src={image}

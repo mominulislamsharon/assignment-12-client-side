@@ -24,7 +24,7 @@ const PopularAdvancer = () => {
       subheading="Our Most Popular Adventures"
       >
       </SectionTitle>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
+      <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
         {
           popularTours.map(tour => <Top3Tour
           key={tour.id}
