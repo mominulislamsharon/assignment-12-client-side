@@ -18,8 +18,10 @@ const Feature = () => {
           <p className='text-xl text-gray-500'>Enjoy your journey with excitement, comfort, and unforgettable experiences. Safe travels!</p>
         </div>
       </div>
-      <div className="feture-item flex justify-center items-center min-h-screen">
-        <h1 className='text-6xl pt-24 font-bold text-white'>Explore Your Travel</h1>
+      <div className="feture-item relative  justify-center items-center min-h-screen">
+        <div className='absolute inset-0 bg-blue-500 bg-opacity-50 flex justify-center items-center'>
+        <h1 className=' text-6xl text-center pt-24 font-bold text-white'>Explore Your Travel</h1>
+        </div>
       </div>
     </div>
   );
