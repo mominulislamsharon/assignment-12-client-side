@@ -3,10 +3,14 @@ import { Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
     <div>
+      <Helmet>
+        <title>Final Tour - About</title>
+      </Helmet>
       <div className="relative">
         <img
           className="h-[500px] w-full object-cover object-center"

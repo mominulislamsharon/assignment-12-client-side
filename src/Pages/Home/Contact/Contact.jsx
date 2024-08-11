@@ -2,11 +2,14 @@ import { CgMail } from "react-icons/cg";
 import {  FaPhone } from "react-icons/fa";
 import { FaLocationDot} from "react-icons/fa6";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
-
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
   return (
     <div>
+      <Helmet>
+        <title>Final Tour - Contact</title>
+      </Helmet>
       <div className="relative">
         <img
           className="h-[500px] w-full object-cover object-center"
