@@ -1,9 +1,9 @@
 
 
-const CoverBanner = ({imgs, title}) => {
+const CoverBanner = ({imgs, title, description}) => {
   return (
     <div
-  className="hero h-[500px] "
+  className="hero h-[500px] bg-cover bg-center"
   style={{
     backgroundImage: `url("${imgs}")
   `}}>
@@ -11,8 +11,8 @@ const CoverBanner = ({imgs, title}) => {
   <div className="hero-content text-neutral-content text-center">
     <div className="max-w-md">
       <h1 className="mb-5 text-6xl font-bold">{title}</h1>
-      <p className="mb-5 text-xl font-medium text-blue-300">
-      Explore our blog for quick insights, helpful tips, and fresh ideas across various topics. Dive in and discover something new today!
+      <p className="mb-5 pt-4 text-xl font-medium text-blue-300">
+      {description}
       </p>
     </div>
   </div>

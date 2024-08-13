@@ -1,21 +1,11 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import Top3Tour from "../Top3Tour/Top3Tour";
+import UseMenu from "../../../Hooks/UseMenu";
 
 
 const PopularAdvancer = () => {
-  const [popularTours, setPopularTours] = useState([]);
-  useEffect(() =>{
-    fetch("menu.json")
-    .then(res => res.json())
-    .then(data => {
-      const top3Tours = data.sort((a, b) => b.price - a.price).slice(0, 3);
-      setPopularTours(top3Tours);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-  },[]);
+  const [popularTours] = UseMenu();
+  const top3Tours = popularTours.sort((a, b) => b.price - a.price).slice(0, 3);
   return (
     <div>
       <section className="text-4xl">
@@ -26,7 +16,7 @@ const PopularAdvancer = () => {
       </SectionTitle>
       <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-screen-xl mx-auto">
         {
-          popularTours.map(tour => <Top3Tour
+          top3Tours.map(tour => <Top3Tour
           key={tour.id}
           tour={tour}
           ></Top3Tour>)

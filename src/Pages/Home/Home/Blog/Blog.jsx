@@ -4,7 +4,7 @@ import CoverBanner from "../../../../Shared/CoverBanner/CoverBanner";
 const Blog = () => {
   return (
     <div className="mb-12">
-      <CoverBanner imgs={"https://plus.unsplash.com/premium_photo-1664472706956-42f42184f7a9?"} title="Our Blogs"></CoverBanner>
+      <CoverBanner imgs={"https://plus.unsplash.com/premium_photo-1664472706956-42f42184f7a9?"} title="Our Blogs" description="Explore our blog for quick insights, helpful tips, and fresh ideas across various topics. Dive in and discover something new today!"></CoverBanner>
       <div className="md:mt-24 flex flex-col md:flex-row gap-8 max-w-screen-xl mx-auto">
       <div className=" w-full grid lg:grid-cols-2 lg:gap-4 ">
       <div className="my-4 ">
