@@ -39,7 +39,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           <Tab>Hosted Tours</Tab>
         </TabList>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10 justify-center items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center">
           {
             adventuretours.map(tour => <TourCard
             key={tour._id}
@@ -49,7 +49,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10 justify-center items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center">
           {
             grouptours.map(tour => <TourCard
             key={tour._id}
@@ -59,7 +59,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10 justify-center items-center ">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center ">
           {
             coupletours.map(tour => <TourCard
             key={tour._id}
@@ -69,7 +69,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10 justify-center items-center ">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center ">
           {
             citytours.map(tour => <TourCard
             key={tour._id}
@@ -79,7 +79,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10 justify-center items-center ">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center ">
           {
             beachtours.map(tour => <TourCard
             key={tour._id}
@@ -89,7 +89,7 @@ const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours
           </div>
         </TabPanel>
         <TabPanel>
-          <div className="grid md:grid-cols-3 gap-10  justify-center items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10  justify-center items-center">
           {
             hostedtours.map(tour => <TourCard
             key={tour._id}

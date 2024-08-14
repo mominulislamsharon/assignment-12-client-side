@@ -6,7 +6,7 @@ const UseMenu =() => {
   const [popularTours, setPopularTours] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() =>{
-    fetch("menu.json")
+    fetch("http://localhost:5000/menu")
     .then(res => res.json())
     .then(data => {
       setPopularTours(data);

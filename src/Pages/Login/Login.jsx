@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 
 const Login = () => {
+  const handleLogin = e => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password  = form.password.value;
+    console.log(email, password);
+  }
     return (
         <div className="hero min-h-screen bg-[#1a1e2c] flex justify-center items-center">
   <div className="hero-content flex-col items-center">
@@ -15,18 +22,18 @@ const Login = () => {
       <h1 className="text-5xl text-white font-bold">Login now!</h1>
     </div>
     <div className="card md:w-[500px] lg:w-[600px] mx-w-sm lg:max-w-lg">
-      <form className="card-body ">
+      <form onSubmit={handleLogin} className="card-body ">
         <div className="form-control">
           <label className="label">
             <span className="label-text text-white font-medium">Email</span>
           </label>
-          <input type="email" placeholder="email" className="input p-2 lg:p-8 md:p-8 input-bordered" required />
+          <input type="email" name="email" placeholder="email" className="input p-2 lg:p-8 md:p-8 input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text text-white font-medium">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered p-2 md:p-8 lg:p-8" required />
+          <input type="password" name="password" placeholder="password" className="input input-bordered p-2 md:p-8 lg:p-8" required />
         </div>
         <div className="form-control mt-8">
           <button className="btn bg-[#1b8ddd] text-white font-bold border-none hover:bg-black hover:text-white">Sign In</button>
