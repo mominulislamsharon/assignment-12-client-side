@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import logoImag from '../../../public/logo-travel.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const hangleLogOut = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error));
+  }
     const navLinks = <>
     <li><Link to="/">HOME</Link></li>
     <li><Link to="/packages">PACKAGES</Link></li>
@@ -14,8 +23,15 @@ const Navbar = () => {
     <div className="dropdown mt-4 dropdown-bottom dropdown-end">
   <div tabIndex={0} role="button" className="btn m-1 text-xl">Profile</div>
   <ul tabIndex={0} className="menu pl-8">
-    < Link to="/login" className="text-black text-xl py-2"><a>LogOut</a></ Link>
-    <Link><a className="text-black text-xl">Dashboard</a></Link>
+    {/* <li>< Link to="/login" className="text-black text-xl py-2">LogOut</ Link></li> */}
+    <Link><a className="text-blue-500 font-bold flex justify-center items-center text-xl">Dashboard</a></Link>
+    {
+      user ? <>
+      <button className="text-blue-500 text-xl font-bold flex justify-center items-center py-4" onClick={hangleLogOut}>LOGOUT</button>
+      </> : <>
+      <li>< Link to="/login" className="text-blue-500 text-xl font-bold flex justify-center items-center">LOGIN</ Link></li>
+      </>
+    }
   </ul>
 </div>
     </>
@@ -40,8 +56,15 @@ const Navbar = () => {
     <div className="dropdown dropdown-bottom dropdown-end">
   <div tabIndex={0} role="button" className="btn m-1">Profile</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-    < Link to="/login" className="text-black"><a>LogOut</a></ Link>
-    <Link><a className="text-black">Dashboard</a></Link>
+    {/* < Link to="/login" className="text-black"><a>LogOut</a></ Link> */}
+     <li><Link className="text-blue-500 text-lg font-bold flex justify-center items-center">DASHBOARD</Link></li>
+    {
+      user ? <>
+      <button className="text-blue-500 text-lg font-bold flex justify-center items-center" onClick={hangleLogOut}>LOGOUT</button>
+      </> : <>
+      <li>< Link to="/login" className="text-blue-500 text-lg font-bold flex justify-center items-center">LOGIN</ Link></li>
+      </>
+    }
   </ul>
 </div>
   </div>

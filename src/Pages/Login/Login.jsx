@@ -1,16 +1,53 @@
+import { useContext } from "react";
 import { FaGoogle, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import Swal from 'sweetalert2'
 
 const Login = () => {
+
+  const {signIn} = useContext(AuthContext);
+
+
+
+
+
   const handleLogin = e => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password  = form.password.value;
     console.log(email, password);
+    signIn(email, password)
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+Swal.fire({
+  title: "User Login Successfull.",
+  showClass: {
+    popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `
+  },
+  hideClass: {
+    popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `
+  }
+});
+    })
+
   }
     return (
+        <>
+        <Helmet>
+          <title>Final Tour - Login</title>
+        </Helmet>
         <div className="hero min-h-screen bg-[#1a1e2c] flex justify-center items-center">
   <div className="hero-content flex-col items-center">
     <div className="text-center lg:text-left">
@@ -48,6 +85,7 @@ const Login = () => {
     </div>
   </div>
 </div>
+        </>
     );
 };
 
