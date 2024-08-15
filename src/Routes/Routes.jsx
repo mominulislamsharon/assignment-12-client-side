@@ -10,6 +10,8 @@ import Contact from "../Pages/Home/Contact/Contact";
 import Blog from "../Pages/Home/Home/Blog/Blog";
 import OurPackages from "../Pages/Home/OurPackages/OurPackages";
 
+
+
   export const router = createBrowserRouter([
     {
       path: "/",
@@ -42,7 +44,7 @@ import OurPackages from "../Pages/Home/OurPackages/OurPackages";
         {
           path: "/packages",
           element: <OurPackages></OurPackages>
-        }
+        }, 
       ]
     },
   ]);

@@ -1,13 +1,19 @@
 import { useContext } from "react";
-import { FaGoogle, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import {FaLock } from "react-icons/fa";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from 'sweetalert2'
+import SocialLogin from "../../Components/SocailLogin/SocialLogin";
 
 const Login = () => {
 
   const {signIn} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
+  console.log("sate in the location login page", location.state);
 
 
 
@@ -40,6 +46,8 @@ Swal.fire({
     `
   }
 });
+
+  navigate(from, {replace: true});
     })
 
   }
@@ -76,11 +84,8 @@ Swal.fire({
           <button className="btn bg-[#1b8ddd] text-white font-bold border-none hover:bg-black hover:text-white">Sign In</button>
         </div>
       </form>
-      <div className="divider mt-6 w-1/2 mx-auto before:bg-white after:bg-white text-white">Or Sign in with</div>
-      <div className="text-white mt-6 border p-3 w-1/2 mx-auto rounded-md shadow flex gap-2 justify-center items-center">
-        <FaGoogle></FaGoogle>
-        <h1>Google</h1>
-      </div>
+      
+      <SocialLogin></SocialLogin>
       <h1 className="text-white text-center mt-6 mb-6">New User? <Link to="/signUp" className="text-blue-500 ml-3">Sign Up</Link></h1>
     </div>
   </div>
