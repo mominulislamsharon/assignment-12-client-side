@@ -3,10 +3,11 @@ import logoImag from '../../../public/logo-travel.png'
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
+import useCart from "../../Hooks/useCart";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
-
+  const [cart] = useCart();
   const hangleLogOut = () => {
     logOut()
     .then(() => {})
@@ -23,7 +24,7 @@ const Navbar = () => {
       <Link to="/">
       <button className="flex justify-center items-center">
         <FaShoppingCart className="mr-2 text-xl"></FaShoppingCart>
-  <div className="badge bg-blue-400 text-white">+0</div>
+  <div className="badge bg-blue-400 text-white">+{cart.length}</div>
 </button>
       </Link>
     </li>

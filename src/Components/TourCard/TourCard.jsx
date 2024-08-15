@@ -3,6 +3,7 @@ import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useCart from "../../Hooks/useCart";
 
 
 
@@ -12,10 +13,11 @@ const TourCard = ({tour}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const axiosSecure = useAxiosSecure();
-  const handleAddTourCart = tourist => {
+  const [, refetch]= useCart();
+
+  const handleAddTourCart = () => {
     if(user && user.email){
       // send cart add database 
-      console.log(tourist, user.email);
       const cartItem = {
         menuId: _id, 
         email: user.email,
@@ -34,6 +36,8 @@ const TourCard = ({tour}) => {
             showConfirmButton: false,
             timer: 1500
           });
+          // reset cart update cart items 
+          refetch();
         }
       })
     }
@@ -68,7 +72,7 @@ const TourCard = ({tour}) => {
         <p className="text-black py-4">{description}</p>
         <Rating className="text-start" style={{ maxWidth: 120 }} value={rating} readOnly />
         <div className="card-actions justify-end mt-2 ">
-          <button onClick={() =>  handleAddTourCart(tour)} className="btn bg-[#1b8ddd]  text-white hover:text-black hover:bg-blue-200 font-bold">Add Tour</button>
+          <button onClick={handleAddTourCart} className="btn bg-[#1b8ddd]  text-white hover:text-black hover:bg-blue-200 font-bold">Add Tour</button>
         </div>
       </div>
     </div>
