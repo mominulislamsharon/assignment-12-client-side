@@ -23,7 +23,7 @@ const TourCard = ({tour}) => {
         email: user.email,
         title,
         image,
-        price
+        price, 
       }
       axiosSecure.post('/carts', cartItem)
       .then(res => {

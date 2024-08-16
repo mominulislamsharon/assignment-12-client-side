@@ -21,7 +21,7 @@ const Navbar = () => {
     <li><Link to="/about">ABOUT</Link></li>
     <li><Link to="/contact">CONTACT</Link></li>
     <li>
-      <Link to="/">
+      <Link to="/dashboard/cart">
       <button className="flex justify-center items-center">
         <FaShoppingCart className="mr-2 text-xl"></FaShoppingCart>
   <div className="badge bg-blue-400 text-white">+{cart.length}</div>

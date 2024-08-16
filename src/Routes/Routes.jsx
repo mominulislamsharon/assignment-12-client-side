@@ -9,6 +9,8 @@ import About from "../Pages/Home/About/About";
 import Contact from "../Pages/Home/Contact/Contact";
 import Blog from "../Pages/Home/Home/Blog/Blog";
 import OurPackages from "../Pages/Home/OurPackages/OurPackages";
+import DashBoard from "../LayOut/DashBoard";
+import Cart from "../Pages/Dashboard/Cart/Cart";
 
 
 
@@ -47,4 +49,14 @@ import OurPackages from "../Pages/Home/OurPackages/OurPackages";
         }, 
       ]
     },
+    {
+      path: "dashboard",
+      element: <DashBoard></DashBoard>,
+      children: [
+        {
+          path: 'cart',
+          element: <Cart></Cart>
+        }
+      ]
+    }
   ]);
