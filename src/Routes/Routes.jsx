@@ -11,6 +11,7 @@ import Blog from "../Pages/Home/Home/Blog/Blog";
 import OurPackages from "../Pages/Home/OurPackages/OurPackages";
 import DashBoard from "../LayOut/DashBoard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -51,7 +52,7 @@ import Cart from "../Pages/Dashboard/Cart/Cart";
     },
     {
       path: "dashboard",
-      element: <DashBoard></DashBoard>,
+      element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
       children: [
         {
           path: 'cart',

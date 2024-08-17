@@ -1,19 +1,16 @@
-import { useContext } from "react";
+
 import { FaGoogle } from "react-icons/fa";
-import { AuthContext } from "../../Providers/AuthProvider";
+import useAuth from "../../Hooks/useAuth";
 
 
 const SocialLogin = () => {
-  const {googleSignIn} = useContext(AuthContext);
+  const {googleSignIn} = useAuth();
 
   const handleGoogleLogin = () => {
     googleSignIn()
     .then(result => {
       console.log(result.user);
-      // const userInfo = {
-      //   email: result.user?.email,
-      //   name: result.user?.displayName
-      // }
+      
     })
   }
   return (
