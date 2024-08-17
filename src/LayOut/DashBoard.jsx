@@ -2,9 +2,11 @@ import { FaHome, FaList, FaShoppingCart } from "react-icons/fa";
 import { FaStreetView } from "react-icons/fa6";
 import { RiAdminFill } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router-dom";
+import useCart from "../Hooks/useCart";
 
 
 const DashBoard = () => {
+  const [cart] = useCart();
   return (
     <div className="flex max-w-screen-xl mx-auto">
       {/* side bar */}
@@ -23,7 +25,7 @@ const DashBoard = () => {
             <li>
               <NavLink to="/dashboard/cart">
               <FaShoppingCart></FaShoppingCart>
-              My Wishlist</NavLink>
+              My Wishlist ({cart.length})</NavLink>
               </li>
             <li>
               <NavLink to="/dashboard/review">
