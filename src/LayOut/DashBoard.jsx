@@ -4,12 +4,13 @@ import { RiAdminFill } from "react-icons/ri";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Hooks/useCart";
 import { GoPackage } from "react-icons/go";
+import useAdmin from "../Hooks/useAdmin";
 
 
 const DashBoard = () => {
   const [cart] = useCart();
   // ToDo: get isAdmin value from the database
-  const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="flex max-w-screen-xl mx-auto">
       {/* side bar */}
