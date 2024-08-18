@@ -12,6 +12,7 @@ import OurPackages from "../Pages/Home/OurPackages/OurPackages";
 import DashBoard from "../LayOut/DashBoard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
+import AllUsers from "../Pages/Dashboard/All Users/AllUsers";
 
 
 
@@ -57,6 +58,11 @@ import PrivateRoute from "./PrivateRoute";
         {
           path: 'cart',
           element: <Cart></Cart>
+        }, 
+        // admin routes 
+        {
+          path: "allUsers",
+          element: <AllUsers></AllUsers>
         }
       ]
     }

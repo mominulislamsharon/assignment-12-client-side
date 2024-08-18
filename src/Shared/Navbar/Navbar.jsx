@@ -30,14 +30,32 @@ const Navbar = () => {
     </li>
     </>
     const profileLinks = <>
-    <div className="dropdown mt-4 dropdown-bottom dropdown-end">
-  <div tabIndex={0} role="button" className="btn m-1 text-xl">Profile</div>
-  <ul tabIndex={0} className="menu pl-8">
-    {/* <li>< Link to="/login" className="text-black text-xl py-2">LogOut</ Link></li> */}
-    <Link><a className="text-blue-500 font-bold flex justify-center items-center text-xl">Dashboard</a></Link>
+    <div className="divider bg-blue-300 h-[2px]"></div>
+    <div className="dropdown mt-2  dropdown-bottom dropdown-end">
+  <div tabIndex={0} role="button" className=" flex justify-center items-center text-xl">
+    {user ? (
+      <img
+      src={user.photoURL}
+      alt="Profile"
+      className="w-10 h-10 rounded-full"
+    />
+    ) : (
+      <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Account</span>
+    ) 
+  }
+  </div>
+  <div className="font-bold flex justify-center py-4">
+    {
+      user ? (
+        <span>{user.displayName}</span>
+      ) : null
+    }
+  </div>
+  <ul tabIndex={0} className="menu">
+    <Link><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
     {
       user ? <>
-      <button className="text-blue-500 text-xl font-bold flex justify-center items-center py-4" onClick={hangleLogOut}>LOGOUT</button>
+      <button className="text-blue-500 text-lg font-bold flex justify-center items-center py-2" onClick={hangleLogOut}>LOGOUT</button>
       </> : <>
       <li>< Link to="/login" className="text-blue-500 text-xl font-bold flex justify-center items-center">LOGIN</ Link></li>
       </>
@@ -64,23 +82,27 @@ const Navbar = () => {
       {navLinks}
     </ul>
     <div className="dropdown dropdown-bottom dropdown-end">
-  <div tabIndex={0} role="button" className="btn m-1">
-
-      {
-        user?.photURL ? (
-          <img 
-          src={user.photoURL}
-          alt="user profile"
-          className="w-8 h-8 rounded-full" />
-        ) : (
-          <span>{user?.displayName || 'Profile'}</span>
-        )
-      }
+  <div tabIndex={0} role="button" className=" flex items-center">
+        {
+          user ? (
+            <img
+            src={user.photoURL}
+            alt="Profile"
+            className="w-10 h-10 rounded-full"
+            />
+          ) : (
+            <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Account</span>
+          )
+        }
       </div>
- 
-
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-    {/* < Link to="/login" className="text-black"><a>LogOut</a></ Link> */}
+  <div className="font-bold text-blue-500 flex justify-center py-4">
+    {
+      user ? (
+        <span>{user.displayName}</span>
+      ) : null
+    }
+  </div>
      <li><Link className="text-blue-500 text-lg font-bold flex justify-center items-center">DASHBOARD</Link></li>
     {
       user ? <>

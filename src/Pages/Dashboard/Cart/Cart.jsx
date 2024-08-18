@@ -39,14 +39,14 @@ const Cart = () => {
 
 
   return (
-    <div className="bg-blue-200">
+    <div className="bg-blue-200 rounded-md">
       <div className="flex justify-evenly mb-10 pt-8">
         <h1 className="text-4xl font-medium">All Package: {cart.length}</h1>
         <h1 className="text-4xl font-medium">Total Price: {totalPrice}</h1>
         <button className="w-16 rounded-md text-white bg-blue-500 text-xl font-bold">Pay</button>
       </div>
       <div className="overflow-x-auto px-12">
-        <table className="table w-full">
+        <table className="table w-full bg-slate-200">
           {/* head */}
           <thead className="bg-blue-500 text-white text-sm">
             <tr>
