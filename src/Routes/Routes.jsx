@@ -13,6 +13,8 @@ import DashBoard from "../LayOut/DashBoard";
 import Cart from "../Pages/Dashboard/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/All Users/AllUsers";
+import AddPackage from "../Pages/Dashboard/AddPackage/AddPackage";
+import AdminRoute from "./AdminRoute";
 
 
 
@@ -55,14 +57,19 @@ import AllUsers from "../Pages/Dashboard/All Users/AllUsers";
       path: "dashboard",
       element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
       children: [
+        // normal user routes
         {
           path: 'cart',
           element: <Cart></Cart>
         }, 
-        // admin routes 
+        // admin only routes 
+        {
+          path: 'addPackage',
+          element: <AdminRoute><AddPackage></AddPackage></AdminRoute>
+        },
         {
           path: "allUsers",
-          element: <AllUsers></AllUsers>
+          element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
         }
       ]
     }
