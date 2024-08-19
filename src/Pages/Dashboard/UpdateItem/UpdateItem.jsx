@@ -42,7 +42,7 @@ const UpdateItem = () => {
       const menuRes = await axiosSecure.patch(`/menu/${_id}`, menuItem);
       console.log(menuRes.data);
       if(menuRes.data.modifiedCount > 0){
-        // reset();
+        reset();
         Swal.fire({
           position: "top-end",
           icon: "success",
