@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/Dashboard/All Users/AllUsers";
 import AddPackage from "../Pages/Dashboard/AddPackage/AddPackage";
 import AdminRoute from "./AdminRoute";
+import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 
 
 
@@ -68,9 +69,14 @@ import AdminRoute from "./AdminRoute";
           element: <AdminRoute><AddPackage></AddPackage></AdminRoute>
         },
         {
+          path: "manageItems",
+          element: <ManageItems></ManageItems>
+        },
+        {
           path: "allUsers",
           element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-        }
+        },
+        
       ]
     }
   ]);

@@ -29,9 +29,9 @@ const DashBoard = () => {
               Add Package</NavLink>
               </li>
             <li>
-              <NavLink to="/dashboard/manageUsers">
+              <NavLink to="/dashboard/manageItems">
               <FaList></FaList>
-              Manage Users</NavLink>
+              Manage Items </NavLink>
               </li>
             <li>
               <NavLink to="/dashboard/manageBooking">
@@ -80,7 +80,7 @@ const DashBoard = () => {
               </li>
               <li>
               <NavLink to="/packages">
-              <FaHome></FaHome>
+              <GoPackage></GoPackage>
               Packages</NavLink>
               </li>
               <li>
