@@ -4,9 +4,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../Hooks/useCart";
+import useAdmin from "../../Hooks/useAdmin";
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
   const [cart] = useCart();
   const hangleLogOut = () => {
     logOut()
@@ -24,7 +26,7 @@ const Navbar = () => {
       <Link to="/dashboard/cart">
       <button className="flex justify-center items-center">
         <FaShoppingCart className="mr-2 text-xl"></FaShoppingCart>
-  <div className="badge bg-blue-400 text-white">+{cart.length}</div>
+  <div className="badge border-none bg-blue-400 text-white">+{cart.length}</div>
 </button>
       </Link>
     </li>
@@ -52,7 +54,12 @@ const Navbar = () => {
     }
   </div>
   <ul tabIndex={0} className="menu">
-    <Link><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+    {
+      user && isAdmin && <Link to="dashboard/adminHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+    }
+    {
+      user && !isAdmin && <Link to="dashboard/userHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+    }
     {
       user ? <>
       <button className="text-blue-500 text-lg font-bold flex justify-center items-center py-2" onClick={hangleLogOut}>LOGOUT</button>
@@ -103,7 +110,12 @@ const Navbar = () => {
       ) : null
     }
   </div>
-     <li><Link className="text-blue-500 text-lg font-bold flex justify-center items-center">DASHBOARD</Link></li>
+     {
+      user && isAdmin && <Link to="dashboard/adminHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+    }
+    {
+      user && !isAdmin && <Link to="dashboard/userHome"><a className="text-blue-500 font-bold flex justify-center items-center text-md">Dashboard</a></Link>
+    }
     {
       user ? <>
       <button className="text-blue-500 text-lg font-bold flex justify-center items-center" onClick={hangleLogOut}>LOGOUT</button>
