@@ -50,15 +50,16 @@ const DashBoard = () => {
               <FaHome></FaHome>
               User Home</NavLink>
               </li>
-            <li>
-              <NavLink to="/dashboard/booking">
-              <FaList></FaList>
-              My Booking</NavLink>
-              </li>
+            
             <li>
               <NavLink to="/dashboard/cart">
               <FaShoppingCart></FaShoppingCart>
               My Wishlist ({cart.length})</NavLink>
+              </li>
+              <li>
+              <NavLink to="/dashboard/paymentHistory">
+              <FaList></FaList>
+              Payment History</NavLink>
               </li>
             <li>
               <NavLink to="/dashboard/review">
