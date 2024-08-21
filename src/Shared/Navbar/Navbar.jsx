@@ -5,6 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../Hooks/useCart";
 import useAdmin from "../../Hooks/useAdmin";
+import userImage from "../../assets/user.png"
 
 const Navbar = () => {
   const {user, logOut} = useContext(AuthContext);
@@ -15,6 +16,8 @@ const Navbar = () => {
     .then(() => {})
     .catch(error => console.log(error));
   }
+  const profilePicture = user?.photoURL || userImage;
+
     const navLinks = <>
     <li><Link to="/">HOME</Link></li>
     <li><Link to="/packages">PACKAGES</Link></li>
@@ -37,48 +40,49 @@ const Navbar = () => {
   <div tabIndex={0} role="button" className=" flex justify-center items-center text-xl">
     {user ? (
       <img
-      src={user.photoURL}
+      src={profilePicture}
       alt="Profile"
       className="w-10 h-10 rounded-full"
     />
     ) : (
-      <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Account</span>
+      <Link to="/login">
+      <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Sign In</span>
+      </Link>
     ) 
   }
   </div>
-  <div className="font-bold flex justify-center py-4">
-    {
-      user ? (
+  {user && (
+    <ul tabIndex={0} className=" menu">
+      <div className="font-bold text-blue-500 flex justify-center py-4">
         <span>{user.displayName}</span>
-      ) : null
-    }
-  </div>
-  <ul tabIndex={0} className="menu">
-    {
-      user && isAdmin && <Link to="dashboard/adminHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
-    }
-    {
-      user && !isAdmin && <Link to="dashboard/userHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
-    }
-    {
-      user ? <>
-      <button className="text-blue-500 text-lg font-bold flex justify-center items-center py-2" onClick={hangleLogOut}>LOGOUT</button>
-      </> : <>
-      <li>< Link to="/login" className="text-blue-500 text-xl font-bold flex justify-center items-center">LOGIN</ Link></li>
-      </>
-    }
-  </ul>
+      </div>
+      {isAdmin ? (
+        <Link to="dashboard/adminHome">
+          <a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a>
+        </Link>
+      ) : (
+        <Link to="dashboard/userHome">
+          <a className="text-blue-500 font-bold flex justify-center items-center text-md">Dashboard</a>
+        </Link>
+      )}
+      <button className="text-blue-500 pt-2 text-lg font-bold flex justify-center items-center" onClick={hangleLogOut}>
+        LOGOUT
+      </button>
+    </ul>
+  )}
 </div>
     </>
     return (
         <div className="navbar lg:px-36 text-white h-[80px] bg-[#011435]  fixed z-10 bg-opacity-50">
-  <div className=" navbar-start">
+  <div className=" navbar-start ">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <ul tabIndex={0} className="menu  text-black menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu text-black menu-md dropdown-content mt-2 z-[1] shadow  bg-base-100 bg-opacity-95 rounded-box w-60">
+        <div className="p-8  flex flex-col gap-2">
         {navLinks}
+        </div>
         {profileLinks}
       </ul>
     </div>
@@ -93,37 +97,33 @@ const Navbar = () => {
         {
           user ? (
             <img
-            src={user.photoURL}
+            src={profilePicture}
             alt="Profile"
             className="w-10 h-10 rounded-full"
             />
           ) : (
-            <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Account</span>
+            <Link to="/login">
+            <span className="bg-blue-500 font-medium text-white py-2 px-4 rounded-full">Sign In</span>
+            </Link>
           )
         }
       </div>
-  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+  { user && ( 
+    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
   <div className="font-bold text-blue-500 flex justify-center py-4">
-    {
-      user ? (
         <span>{user.displayName}</span>
-      ) : null
-    }
   </div>
      {
-      user && isAdmin && <Link to="dashboard/adminHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+      isAdmin ? ( <Link to="dashboard/adminHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+      ) : (
+        <Link to="dashboard/userHome"><a className="text-blue-500 font-bold flex justify-center items-center text-lg">Dashboard</a></Link>
+      )
     }
-    {
-      user && !isAdmin && <Link to="dashboard/userHome"><a className="text-blue-500 font-bold flex justify-center items-center text-md">Dashboard</a></Link>
-    }
-    {
-      user ? <>
-      <button className="text-blue-500 text-lg font-bold flex justify-center items-center" onClick={hangleLogOut}>LOGOUT</button>
-      </> : <>
-      <li>< Link to="/login" className="text-blue-500 text-lg font-bold flex justify-center items-center">LOGIN</ Link></li>
-      </>
-    }
-  </ul>
+  <button className="text-blue-500 pt-4 text-lg font-bold flex justify-center items-center" onClick={hangleLogOut}>
+        LOGOUT
+      </button>
+    </ul>
+  )}
 </div>
   </div>
 </div>

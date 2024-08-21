@@ -4,7 +4,7 @@ import { FaUserEdit } from "react-icons/fa";
 
 const BestTravel = () => {
     return (
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-52 max-w-screen-xl mx-auto mt-24 p-4">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-52 max-w-screen-xl mx-auto mt-24 p-4 mb-28">
             <div className="pt-4 lg:pt-16">
                 <button className="bg-[#1a8ddc] p-3 font-bold text-white w-full lg:w-auto rounded-md">WHAT WE DO</button>
                 <h1 className=" text-2xl lg:text-3xl pt-4 lg:pt-8 font-bold">Best Overworld Travel Guide Agency Services</h1>

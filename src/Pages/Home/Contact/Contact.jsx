@@ -16,7 +16,7 @@ const Contact = () => {
           src="https://images.pexels.com/photos/1058949/pexels-photo-1058949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt=""
         />
-        <div className="absolute text-white top-40 left-20 ">
+        <div className="absolute  text-white top-40 left-20 ">
           <h1 className="text-4xl my-8 font-bold">
             Contact <span className="text-orange-400">Us</span>
           </h1>

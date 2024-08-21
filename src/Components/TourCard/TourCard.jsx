@@ -59,7 +59,7 @@ const TourCard = ({tour}) => {
     }
   }
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-96 shadow-xl mb-16">
       <figure>
         <img  className="h-48 w-full object-cover"
           src={image}

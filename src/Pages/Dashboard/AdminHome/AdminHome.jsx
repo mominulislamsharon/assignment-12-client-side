@@ -107,7 +107,7 @@ const pieChartData = chartData.map(data => {
     <div className="stat-value">{stats.orders}</div>
   </div>
      </div>
-     <div className="flex">
+     <div className="flex gap-12 mt-12">
       <div className="w-1/2">
       <BarChart
       width={500}
