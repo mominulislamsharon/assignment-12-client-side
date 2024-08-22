@@ -13,7 +13,7 @@ const OurPackages = () => {
 const grouptours = popularTours.filter(tour => tour.category === 'Group Tours');
 const coupletours = popularTours.filter(tour => tour.category === 'Couple Tours');
 const citytours = popularTours.filter(tour => tour.category === 'City Tours');
-const beachtours = popularTours.filter(tour => tour.category === 'Beach_Holidays');
+const beachtours = popularTours.filter(tour => tour.category === 'Beach Holidays');
 const hostedtours  = popularTours.filter(tour => tour.category === 'Hosted Tours');
 
 

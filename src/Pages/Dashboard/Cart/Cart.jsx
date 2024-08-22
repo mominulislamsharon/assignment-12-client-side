@@ -1,4 +1,4 @@
-import { FaTrashAlt } from "react-icons/fa";
+import { FaArrowRight, FaTrashAlt } from "react-icons/fa";
 import useCart from "../../../Hooks/useCart";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
@@ -45,9 +45,9 @@ const Cart = () => {
         <h1 className="text-4xl font-medium">All Package: {cart.length}</h1>
         <h1 className="text-4xl font-medium">Total Price: {totalPrice}</h1>
         {cart.length ? <Link to="/dashboard/payment">
-        <button  className=" btn border-none rounded-md text-white bg-blue-500 text-xl font-bold">Pay</button>
+        <button  className=" btn border-none rounded-md text-white bg-blue-500 text-xl font-bold">Payment Process<FaArrowRight className="ml-2"></FaArrowRight></button>
         </Link> :
-        <button disabled className=" btn border-none rounded-md text-white bg-blue-500 text-xl font-bold">Pay</button>
+        <button disabled className=" btn border-none rounded-md text-white bg-blue-500 text-xl font-bold">Payment Process<FaArrowRight className="ml-2"></FaArrowRight></button>
         }
       </div>
       <div className="overflow-x-auto px-12">

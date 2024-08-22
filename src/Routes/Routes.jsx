@@ -22,6 +22,7 @@ import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 import Community from "../Pages/Community/Community";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 
@@ -29,6 +30,7 @@ import Community from "../Pages/Community/Community";
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
