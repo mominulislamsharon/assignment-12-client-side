@@ -100,7 +100,7 @@ const UpdateItem = () => {
                 </select>
               </label>
             </div>
-            {/* price */}
+            {/* price details */}
             <div className="w-full">
               <label className="form-control w-full my-6">
                 <div className="label">
